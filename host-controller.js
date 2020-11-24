@@ -25,7 +25,7 @@ class HostController {
         clients.forEach(key => {
             let clientConn = hostPeer.connect(key);
             //#TODO: Delay is necessary to allow connection to establish but isn't v scalable.
-            setTimeout(() => { clientConn.send(this.hostModel.HostModel); }, 200);
+            setTimeout(() => { clientConn.send(this.hostModel.HostModel); }, 500);
         });
     }
 }
