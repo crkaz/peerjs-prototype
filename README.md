@@ -7,3 +7,7 @@ This is done by updating an in-memory data model which is broadcasted to all con
 
 Motivation for the general idea is to create a remote game for STEM activities (especially during the pandemic) that circumvents the need
 for paid hosting or other services, and doesn't raise any regulatory or policy concerns due to downloading software. 
+
+
+### PeerJS
+https://peerjs.com/docs.html#dataconnection-datachannel
