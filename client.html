@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PeerJS Example</title>
+    <style>
+        body {
+            font-family: "Consolas";
+            max-width: 8in;
+            text-align: center;
+            margin: 0 auto;
+        }
+    </style>
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+   
+</head>
+
+<body>
+    <h1>PeerJS Example</h1>
+    <hr>
+    <br>
+    <p><span>Your ID: </span><span id="clientId"></span></p>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+    </ul>
+
+    <input id="hostCode" type="text" placeholder="Enter host code...">
+    <input id="clickMe" type="button" value="Connect" onclick="connect();" />
+
+    <br />
+    <br />
+    <h3>Controls</h3>
+    <input id="left" type="button" value="Left" onclick="move('left');" />
+    <input id="left" type="button" value="Right" onclick="move('right');" />
+    <input id="left" type="button" value="Down" onclick="move('down');" />
+    <input id="left" type="button" value="Up" onclick="move('up');" />
+    <br>
+
+    <div id="canvasParent">
+        <canvas id="canvas" width="300" height="300" style="border:1px black solid;"></canvas>
+    </div>
+    <script src="canvas-model.js"></script>
+    <script src="canvas-controller.js"></script>
+    <script src="client.js"></script>
+</body>
+
+</html>
