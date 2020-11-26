@@ -1,0 +1,11 @@
+<br>
+<h3>Game</h3>
+<div>
+    <input id="left" type="button" value="Left" (click)="move('left');" />
+    <input id="right" type="button" value="Right" (click)="move('right');" />
+    <input id="down" type="button" value="Down" (click)="move('down');" />
+    <input id="up" type="button" value="Up" (click)="move('up');" />
+</div>
+<br>
+<canvas #myCanvas width="300" height="300" style="border:1px black solid;"></canvas>
+<p>Coords: <span>{{x}}</span><span>,</span><span>{{y}}</span></p>

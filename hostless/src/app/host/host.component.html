@@ -1,0 +1,11 @@
+<h1>Unique code: {{sessionCode}} <span><button (click)="endGame()">end game</button></span></h1>
+<p>Share this code with your players.</p>
+<br/>
+
+<app-game-canvas [sessionCode]="sessionCode"></app-game-canvas>
+
+<br/>
+<h3>Connected Players</h3>
+<ol>
+    <li *ngFor="let player of players">{{player}}</li>
+</ol>
