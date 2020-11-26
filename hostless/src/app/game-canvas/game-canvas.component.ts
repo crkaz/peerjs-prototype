@@ -38,7 +38,6 @@ export class GameCanvasComponent implements AfterViewInit {
 
   initialiseGameModel(): void {
     this.gameStateDbRef = this.db.object(this.sessionCode + '/game');
-    this.gameStateDbRef.set(this.GameModel);
     this.gameStateDbRef.valueChanges().subscribe((data) => {
       console.log('Receiving updates from server...');
       console.log(data);

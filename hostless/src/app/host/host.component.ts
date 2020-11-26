@@ -12,6 +12,7 @@ import {
 })
 export class HostComponent implements OnInit, OnDestroy {
   sessionCode: string;
+  gameStateDbRef: AngularFireObject<any>;
   sessionDbRef: AngularFireObject<any>;
   playersDbRef: AngularFireList<any>;
   players: string[] = [];
@@ -44,6 +45,12 @@ export class HostComponent implements OnInit, OnDestroy {
   initialise(): void {
     this.generateSessionCode();
     this.loadPlayers();
+    this.initGame();
+  }
+
+  initGame(): void {
+    this.gameStateDbRef = this.db.object(this.sessionCode + '/game');
+    this.gameStateDbRef.set({x:0, y:0});
   }
 
   endGame(): void {
